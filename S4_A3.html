@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<!--Head tag begins-->
+	<head> 
+		<title> Assignment #4.3 - CSS3 Animation using transition </title>
+	</head>
+	<!--Head tag ends-->
+	
+	<!-- Internal style sheet is being called -->
+	<style>
+		.box{
+			width:200px;
+			height:200px;
+			background-color:rgba(79, 33, 124, 0.24);
+			margin:auto;
+			animation: squaretocircle 8s ease-in-out forwards;
+			-webkit-animation: squaretocircle 8s ease-in-out forwards;
+		}
+		
+		
+		.box:hover{ 
+			cursor: pointer;
+			animation-play-state: running;
+		}
+		
+		.text{
+			text-align: center;
+			margin:auto;
+			padding-top:70px;
+			font-size: 3em;
+			color: white;
+		}
+		
+		/* Safari 4.0 - 8.0 */
+		@-webkit-keyframes squaretocircle {
+			0%   {background-color: green; border-radius: 0px;}
+			25%  {background-color: orange; border-radius: 25px;}
+			50%  {background-color: orange; border-radius: 50px;}
+			75%  {background-color: orange; border-radius: 75px;}
+			100% {background-color: orange; border-radius: 100px;}
+		}
+
+		/* Standard syntax */
+		@keyframes squaretocircle {
+			0%   {background-color: green; border-radius: 0px;}
+			25%  {background-color: orange; border-radius: 25px;}
+			50%  {background-color: orange; border-radius: 50px;}
+			75%  {background-color: orange; border-radius: 75px;}
+			100% {background-color: orange; border-radius: 100px;}
+		}
+	</style>
+	<!-- Internal CSS ends -->
+
+	<!--Body tag begins-->
+	<body>
+		<div class="box">
+			<div class="text">
+				Box
+				</div>
+		</div>
+	</body>
+	<!--body tag ends-->
+	
+	<!-- Assignment to apply CSS3 Animation using transition -->
+</html>	
